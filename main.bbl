@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{clean_air_act}
+J.~E. Aldy, M.~Auffhammer, M.~Cropper, A.~Fraas, and R.~Morgenstern, ``Looking
+  back at 50 years of the clean air act,'' {\em Journal of Economic
+  Literature}, vol.~60, no.~1, pp.~179--232, 2022.
+
+\bibitem{smoke_PM}
+M.~Burke, A.~Driscoll, S.~Heft-Neal, J.~Xue, J.~Burney, and M.~Wara, ``The
+  changing risk and burden of wildfire in the united states,'' {\em Proceedings
+  of the National Academy of Sciences}, vol.~118, no.~2, p.~e2011048118, 2021.
+
+\bibitem{smoke_mortality}
+E.~Gakidou, A.~Afshin, A.~A. Abajobir, K.~H. Abate, C.~Abbafati, K.~M. Abbas,
+  F.~Abd-Allah, A.~M. Abdulle, S.~F. Abera, V.~Aboyans, {\em et~al.}, ``Global,
+  regional, and national comparative risk assessment of 84 behavioural,
+  environmental and occupational, and metabolic risks or clusters of risks,
+  1990--2016: a systematic analysis for the global burden of disease study
+  2016,'' {\em The Lancet}, vol.~390, no.~10100, pp.~1345--1422, 2017.
+
+\bibitem{goes}
+S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon, {\em The GOES-R
+  series: a new generation of geostationary environmental satellites}.
+\newblock Elsevier, 2019.
+
+\bibitem{frp}
+W.~Schroeder, P.~Oliva, L.~Giglio, and I.~A. Csiszar, ``The new viirs 375 m
+  active fire detection data product: Algorithm description and initial
+  assessment,'' {\em Remote Sensing of Environment}, vol.~143, pp.~85--96,
+  2014.
+
+\bibitem{hms}
+D.~McNamara, G.~Stephens, M.~Ruminski, and T.~Kasheta, ``The hazard mapping
+  system (hms) - noaa's multi-sensor fire and smoke detection program using
+  environmental satellites,'' {\em Conference on Satellite Meteorology and
+  Oceanography}, 01 2004.
+
+\bibitem{hms_val}
+W.~Schroeder, M.~Ruminski, I.~Csiszar, L.~Giglio, E.~Prins, C.~Schmidt, and
+  J.~Morisette, ``Validation analyses of an operational fire monitoring
+  product: The hazard mapping system,'' {\em International Journal of Remote
+  Sensing}, vol.~29, no.~20, pp.~6059--6066, 2008.
+
+\bibitem{hms_web}
+NOAA, ``Hazard mapping system fire and smoke product.''
+
+\end{thebibliography}

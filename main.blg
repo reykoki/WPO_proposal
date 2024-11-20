@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: main.bib
+Warning--entry type for "hms_web" isn't style-file defined
+--line 323 of file main.bib
+You've used 8 entries,
+            1876 wiz_defined-function locations,
+            610 strings with 6402 characters,
+and the built_in function-call counts, 2550 in all, are:
+= -- 239
+> -- 141
+< -- 0
++ -- 50
+- -- 42
+* -- 190
+:= -- 371
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 122
+empty$ -- 206
+format.name$ -- 42
+if$ -- 608
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 28
+num.names$ -- 8
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 104
+stack$ -- 0
+substring$ -- 158
+swap$ -- 63
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 21
+width$ -- 9
+write$ -- 79
+(There was 1 warning)
