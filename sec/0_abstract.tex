@@ -1,3 +1,37 @@
-\begin{abstract}
-    The global increase in the frequency and intensity of wildfires underscores the need for advancements in fire monitoring techniques. In order to investigate deep learning approaches for detecting and tracking wildfires and the related human health impacts, we present SmokeViz, a large scale machine learning dataset of smoke plumes in satellite imagery. To build the dataset, we refine a set of human-generated annotations created by analysts at the National Oceanic and Atmospheric Administration. Each annotation gives a general temporal and geographical approximation of smoke plumes but at variable and, primarily, low temporal resolution. We present an innovative solution for refining the temporal and spatial resolution in the given analyst annotations by leveraging the semi-supervised method, pseudo-labeling. Unlike typical pseudo-labeling applications that aim to increase the number of labeled samples, the objective is to use pseudo-labels to refine an existing but course-grained set of annotations. We train a deep learning model to generate pseudo-labels that pinpoint the singular, most representative, satellite image to match the smoke annotation within the given temporal range. By identifying the most representative imagery of smoke plumes for a given smoke annotation, the study seeks to create an accurate and relevant machine learning dataset. The resulting SmokeViz dataset is anticipated to be an instrumental tool in developing further machine learning models for studying wildfires and is publically availble at [aws download link].
-\end{abstract}
+\begin{center}
+    \large \textbf{Abstract}\\
+
+    \medskip
+
+    \large Fire Weather Testbed Evaluation of SmokeViz: A Deep Learning Wildfire Smoke Plume Analysis Product for Data Assimilation 
+\end{center}
+
+\bigskip
+
+\noindent\textbf{Project Goal:} In order to address the need to advance predictive capabilities for wildfire smoke dispersion and air quality, we present an innovative and computationally efficient smoke analysis product, SmokeViz. 
+
+\bigskip
+
+\noindent\textbf{Problem/Opportunity Statement:} Currently, wildfire smoke plume models such as HRRR and RRFS have a significant latency for representing the plumes from recently started wildfires. This project addresses the operational need to address model latency for wildfire smoke by providing a timely and reliable smoke observation product for data assimilation into air quality prediction models. 
+
+\bigskip
+
+\noindent\textbf{Methodology and Timeline:} Over the proposed two year timeline, we will validate SmokeViz’s capabilities to identify smoke over North America. Then we will integrate and evaluate SmokeViz as input to HRRR-Smoke as a data assimilation product within an operational context.
+
+\bigskip
+
+\noindent\textbf{Primary Project Products/Outputs:} The project will produce an operationally-ready smoke analysis product that can be used for near-realtime data assimilation for air quality models. 
+
+\bigskip
+
+\noindent\textbf{Expected Results, Outcomes, and Benefits:} The expected result will be a deep learning based smoke analysis product that describes the current extent and categorical density of smoke. Used as a smoke data assimilation product, SmokeViz is expected to significantly advance short-range model predictive capabilities for rapidly evolving wildfires.
+
+\bigskip
+
+\noindent\textbf{Intended Beneficiaries and Recipients:} Expected end-users SmokeViz would include HMS analysts and scientists that create and run the air quality and smoke plume dispersion models along with down-the-line air quality forecasters and decision makers.
+
+\bigskip
+
+\noindent\textbf{Readiness Levels:} The current RL for this project is RL 5 where we have performed evaluation and testing for SmokeViz on streaming GOES imagery. At the end of this project timeline, we will work with a transition partner to reach readiness level 8.
+
+

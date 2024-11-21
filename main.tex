@@ -1,11 +1,13 @@
 % CVPR 2025 Paper Template; see https://github.com/cvpr-org/author-kit
 
 \documentclass[12pt,onecolumn,letterpaper]{article}
+%\usepackage{titling}
+
 
 %%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
 % \usepackage{cvpr}              % To produce the CAMERA-READY version
-\usepackage[review]{cvpr}      % To produce the REVIEW version
-% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+% \usepackage[review]{cvpr}      % To produce the REVIEW version
+\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
 
 % Import additional packages in the preamble file, before hyperref
 \input{preamble}
@@ -26,32 +28,34 @@
 \def\confYear{2025}
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{Verfication and Validation of SmokeViz: An Ensemble-Based Deep Learning Model for Identifying Wildfire Smoke Plumes in Satellite Imagery}
+\title{Fire Weather Testbed Evaluation of SmokeViz: A Deep Learning Wildfire Smoke Plume Analysis Product for Data Assimilation \\ \small FY2025 Weather Program Office Research Programs Announcement - Testbeds \\ \small NOAA-OAR-WPO-2025-28601 \\ Fire Weather Testbed}
+
+
 
 %%%%%%%%% AUTHORS - PLEASE UPDATE
-\author{First Author\\
-Institution1\\
-Institution1 address\\
-{\tt\small firstauthor@i1.org}
-% For a paper whose authors are all at the same institution,
-% omit the following lines up until the closing ``}''.
-% Additional authors and addresses can be added with ``\and'',
-% just like the second author.
-% To save space, use either the email address or home page, not both
+\author{\textbf{Lead PI:} Rey Koki, Associate Scientist in Machine Learning\\
+Cooperative Institute for Research in Environmental\\
+Sciences (CIRES), NOAA GSL affiliate\\
+phone: {\tt\small 303-478-9911}, email: {\tt\small rey.koki@noaa.gov}
 \and
-Second Author\\
-Institution2\\
-First line of institution2 address\\
-{\tt\small secondauthor@i2.org}
+\textbf{Collaborator:} Jebb Q. Stewart, Weather Visualization and AI\\
+Research Development (WIZARD) Branch Chief, NOAA GSL\\
+phone: {\tt\small 307-215-3917}, email: {\tt\small jebb.q.stewart@noaa.gov}
+\and
+\textbf{Collaborator:} Eric James, Senior Associate Scientist, NOAA GSL\\
+phone: {\tt\small 720-340-1167}, email: {\tt\small eric.james@noaa.gov}
+\and
+\textbf{Collaborator:} Wilfrid Schroeder, Physical Scientist, NOAA NESDIS\\
+phone: {\tt\small 202-341-7763}, email: {\tt\small wilfrid.schroeder@noaa.gov}
 }
 
 \begin{document}
 \maketitle
-%\input{sec/0_abstract}    
-\input{sec/1_intro}
-%\input{sec/2_related_work}
-%$\input{sec/3_methods}
-%\input{sec/4_results}
+\pagebreak
+\input{sec/0_abstract}
+\pagebreak
+\input{sec/new_intro}
+
 {
     \small
     \bibliographystyle{ieeetr}

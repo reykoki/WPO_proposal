@@ -43,17 +43,14 @@ Currently, HRRR and RRFS have a significant latency for representing the plumes 
 
 \begin{figure*}
     \centering
-    \includegraphics[width=\linewidth]{figures/marshall.png}
+    \includegraphics[width=.8\linewidth]{figures/marshall.png}
     \caption{Top row shows the HMS smoke annotations, middle is SmokeViz and bottom row is HRRR smoke for the start of the Marshall fire in Boulder, CO on December 29th, 2021.}\label{marshall}
 \end{figure*}
 
 \section{Methods and Activities}
 
-While we will work directly with the fire weather testbed to develop a thorough and fair proccess for SmokeViz evaluation, here we will provide a summary of key aspects we will address.
+While we will work directly with the fire weather testbed to develop a thorough and fair proccess for SmokeViz evaluation, we provide a summary of key aspects we will address.
 
-\begin{equation} \label{overall_iou}
-    IoU_{\text{overall}} = \frac{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|}{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
-\end{equation}
 
 \begin{figure*}
     \centering
@@ -62,53 +59,88 @@ While we will work directly with the fire weather testbed to develop a thorough 
 \end{figure*}
 
 \begin{enumerate}
-    \item \textbf{Identify all the relevant end users.} We have the HMS analysts that would directly use the product and HRRR/RRFS smoke dispersion model developers, but would want to determine if including further down the line users would be relevant to the evaluation. The HMS smoke product and HRRR forecast is publically published online so that it is difficult to track all users, but we will develop a strategy for identifying and communicating with users.
+    \item \textbf{Identify all the relevant end users.} We have identified the HMS analysts that would directly use the product and HRRR/RRFS smoke dispersion model developers as end-users but would want to determine if including further down the line users would be relevant to the evaluation. Further potential end-user adopters of the SmokeViz product would include scientists that would want a smoke plume data assimilation product for air quality models along with down-the-line air quality forecasters and decision makers. The HMS smoke product and HRRR forecast output are publically available online so that it is difficult to track all users, but we will develop a strategy for identifying and communicating with users. 
 
-    \item \textbf{Establish the needs for all end users.} While we have the needs established for those end users that are collaborators on this proposal, we need to perform an assessment on current further down the line end users of the HMS smoke product.
+    \item \textbf{Establish the needs for current/potential end users.} While SmokeViz offers some advantages to the HMS smoke analyst product, we need to ensure that we are not missing any use cases if we propose to replace/modify the HMS smoke product. For instance, if a down-the-line user needs an approximation of smoke existing within a polygon over a large time window, we can facilitate that need, but would need to first identify it. For further advancements of using SmokeViz for data assimilation uses, we need to establish how we can best fit the requirements for temporal and spatial resolution.
 
     \item \textbf{Survey how to improve training material and documentation.} We have a tutorial available on how to use the SmokeViz model on specified GOES imagery, but would want to do further assessments on how we can make it more user-friendly to not only the scientific community but also the general public. This would be an iterative proccess that would start before the official testbed evaluation event. Success of the training materials will be included as part of the testbed evaluation.
 
 
-\item \textbf{Determine evaluation metrics.} 
+    \item \textbf{Integrate SmokeViz as a smoke analysis product for HRRR Smoke.} SmokeViz was developed with the goal of creating a real-time smoke analysis product on streaming satellite imagery with comparable results to the HMS smoke product. Therefore, no additional steps are currently needed for SmokeViz to be in a comparable format to the HMS smoke product. On the other hand, integrating SmokeViz into the HRRR Smoke forecasting model will require some minimal development. The framework for data assimilation into HRRR Smoke is already established but some work will be required to ensure effective integration of SmokeViz as a smoke analysis product.
+
+
+    \item \textbf{Determine evaluation metrics.} In the SmokeViz paper that is currently in the review process, we use intersection over union (IoU) to quanitfy the overlap between SmokeViz and HMS analyst annotations (equation \ref{overall_iou} and figure \ref{examples}). The results reported in that paper gives an IoU score of 0.62 between the two datasets. IoU is a commonly used evaluation metric for object semantic segmenation but can have nuances, especially when your ground truth (HMS annotations) may have inconsistencies. Having a lower IoU value between the SmokeViz output and HMS annotations does not necessarily mean that SmokeViz performed poorly. 
+
+\begin{equation} \label{overall_iou}
+    IoU = \frac{| A \cap B|}{|A|\cup|B|}
+\end{equation}
+
+        We anticipate that the addition of SmokeViz as a smoke analysis product into the HRRR smoke dispersion forecasting will be more straight forward to evaluate. While HRRR smoke has not been formally validated, there has been a case study performed on how well HRRR smoke forecasting aligned with air quality ground measurements for the 2018 Camp Fire \cite{camp}. Through a similar analysis, we can quantify if there is an improvement with how well the HRRR smoke forecast performs when compared to PM\textsubscript{2.5} measurements once the SmokeViz analysis product is introduced.
 
     \item \textbf{Develop evaluation scenarios.} The SmokeViz model was trained on smoke plumes from 2018-2021 and 2024. 2023 data served to validate the model and 2022 was used for final performance testing. Since neither of those years were used for training the model they could be included for testbed evaluation but it would be important to add in events from 2025 that the model has never touched before. We would need to include scenarios from varying solar zenith angles during the day and over different seasons of the year. Since the SmokeViz model domain covers all of North America, there should be scenarios that span multiple geolocations within those boundaries. While currently untested, we anticipate SmokeViz to have similar performance in the Southern hemisphere and would include samples to test that hypothesis.
 
-    \item \textbf{Perform evaluation.} 
+    \item \textbf{Perform evaluation.} We will hold the evaluation in Boulder, Colorado at NOAA Fire Weather Testbed. Participants will include HMS representatives and proposal collaborators from College Park, Maryland and the HRRR Smoke developers and collaborators local to the Boulder area along with any additional relevant virtual participants identified. We anticipate that the evaluation will take place over two days where the focus of the first day will be on training how to use SmokeViz and starting the HMS smoke product evaluation. The second day be focused on further HMS smoke product comparisons and the HRRR Smoke dispersion modeling evaluation.
+
+    \item \textbf{Obtain formal testbed evaluation.}  We will coordinate with the Fire Weather Testbed to obtain a formal testbed evaluation after the event has occurred. 
+
+    \item \textbf{Implement SmokeViz evaluation feedback.} After obtaining feedback from the testbed evaluation, we will stategize on how to address any concerns and implement the feedbafck into the SmokeViz product. 
+
+    \item \textbf{Demonstrate SmokeViz outside of testbed scenarios.} Once the evaluation feedback has been addressed, we will demonstrate the updated SmokeViz in operstaions at the HMS analyst operations and for the HRRR Smoke forecasting model and obtain any further feedback. 
+
+    \item \textbf{Deliver final SmokeViz product.} After the last stage of feedback, we will demonstrate the final updated version of SmokeViz in operations and deliver the finalized documentation for the trasition plan to opersion.
 
 \end{enumerate}
 
 
 \section{Products/Outputs}
-The project will produce an operationally-ready smoke analysis product that can be used for near-realtime DA for air quality models. Additionally, a comprehensive report on the operational utility of the SmokeViz product will be delivered in order to support operational deployment.
 
-Potential end-user adopters of the SmokeViz product would include the scientists that create and run the air quality and smoke plume dispersion models along with down-the-line air quality forecasters and decision makers.
+The project will produce an operationally-ready smoke analysis product that can be used for near-realtime data assimilation for air quality models. Additionally, a comprehensive report on the operational utility of the SmokeViz product will be delivered in order to support operational deployment.
+
 
 \section{Impacts/Benefits/Outcomes}
 
-The expected result will be an efficient deep learning based smoke analysis product that describes the current extent and categorical density of smoke. Used as a smoke DA product, SmokeViz is expected to significantly advance short-range model predictive capabilities for rapidly evolving wildfires.
+The expected result will be an efficient deep learning based smoke analysis product that describes the current extent and categorical density of smoke. Used as a smoke data assimilation product, SmokeViz is expected to significantly advance short-range model predictive capabilities for rapidly evolving wildfires. Additionally, we anticipate SmokeViz to reduce HMS analyst smoke plume related workload so that they can instead focus on other areas of interest for satellite environmental obsersvations.
+
+The scope of this proposal is focused on getting SmokeViz operational specifically for the United States to detect and monitor wildfires in North America. But verification of SmokeViz for North America will give insights on further deep learning wildfire smoke algorithms for other parts of the world that may not have the required resources for analysts to continuously monitor smoke plumes.
 
 \section{Schedule}
 
-\begin{tabular}{ |p{3cm}|p{3cm}|p{8cm}|  }
+
+The current RL for this project is RL 5 where we have performed evaluation and testing for SmokeViz on streaming GOES imagery. At the end of this project timeline, we will work with a transition partner to reach readiness level 8. The timeline for the project spans from August 2025 through July 2027.
+
+
+\begin{tabular}{ |p{1cm}|p{3cm}|p{12cm}|  }
  \hline
- \multicolumn{3}{|c|}{Schedule} \\
+ \multicolumn{3}{|c|}{\textbf{Schedule}} \\
  \hline
- Date & Start RL & milestone\\
+ \textbf{RL} & \textbf{date} & \textbf{deliverables}\\
  \hline
- Q1 & 5 & \\
- Aland Islands&   AX  & ALA   \\
+ 5 & now & SmokeViz product has been evaluated on streaming GOES imagery. Protype for HMS analyst usage has been developed for Continental US.\\
+ \hline
+ 5 & Q4 2025 & Identify all relevant end users and establish current and potential future needs. Survey how to improve training material and documentation.\\
+ \hline
+ 5 & Q1-Q2 2026 & Iterative process for improving training material and documentation. HRRR Smoke analysis product integration. Create evaluation plan.\\
+ \hline
+ 6 & Q3 2026 & Determine evaluation scenarios and perform evaluation within testbed.\\
+ \hline
+ 6 & Q4 2026 & After SmokeViz evaluation is delivered by testbed, integrate feedback.\\
+ \hline
+ 7 & Q1 2027 & Demonstrate SmokeViz in operations at HMS and for HRRR Smoke forecasting. Identify any final changes to be made.\\
+ \hline
+ 7 & Q2 2027 & Implement changes identified during operations demonstration.\\
+ \hline
+ 8 & Q3 2027 & Demonstrate the final version of SmokeViz at HMS and for HRRR Smoke forecasting and finalize documentation for transition.\\
  \hline
 \end{tabular}
 
-The current RL for this project is RL 5 where we have performed evaluation and testing for SmokeViz on streaming GOES imagery. At the end of this project timeline, we will work with a transition partner to reach readiness level 8.
+
 
 \section{Outreach and Education}
 
 We've developed a series of Jupyter Lab notebooks that walk users through the SmokeViz dataset hosted by NOAA on AWS that includes HMS analyst annotations and the corresponding GOES imagery. The notebooks demonstrate how the user can interact with the currated dataset to train their own deep learning models and how to apply the tested SmokeViz model to incoming GOES imagery in order to detect active smoke plumes.
 
-The SmokeViz dataset and model serve as an excellent benchmark for learning how to work with large environmental datasets and deep learning models. We've put a lot of thought and effort into the reproducibility of the research along with readibility of the code and tools. Not only can users use the codebase for smoke plume realted projects but also as a toolkit for other remote sensing work involving satellite imagery and geospatial shape files. 
+The SmokeViz dataset and model serve as an excellent benchmark for learning how to work with large environmental observation datasets and deep learning models. We've put a lot of thought and effort into the reproducibility of the research along with readibility of the code and tools. Not only can users use the codebase for smoke plume realted projects but also as a toolkit for other remote sensing work involving satellite imagery and geospatial shape files. 
 
-This proposal is focused on getting SmokeViz operational in the United States for detecting and monitoring wildfires in North America. We will reach out to facilitate virtual participation from Mexico's National Weather Service for the SmokeViz evaluation. Verification of SmokeViz for North America will give insights on developing additional deep learning wildfire smoke algorithms for other parts of the world that may not have the required resources to have analysts constantly monitor smoke plumes.
 
 
 \section{Diversity and Inclusion}
