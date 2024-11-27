@@ -8,6 +8,7 @@
 % \usepackage{cvpr}              % To produce the CAMERA-READY version
 % \usepackage[review]{cvpr}      % To produce the REVIEW version
 \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+\usepackage{multirow}
 
 % Import additional packages in the preamble file, before hyperref
 \input{preamble}
@@ -28,18 +29,20 @@
 \def\confYear{2025}
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{Fire Weather Testbed Evaluation of SmokeViz: A Deep Learning Wildfire Smoke Plume Analysis Product for Data Assimilation \\ \small FY2025 Weather Program Office Research Programs Announcement - Testbeds \\ \small NOAA-OAR-WPO-2025-28601 \\ Fire Weather Testbed}
-
-
+\title{\vspace{-1.6cm}Fire Weather Testbed Evaluation of SmokeViz: A Deep Learning Wildfire Smoke Plume Analysis Product for Data Assimilation \\ \scriptsize \line(1,0){450} \\ \normalsize FY2025 Weather Program Office Research Programs Announcement - Testbeds \\ Notice of Funding Opportunity: NOAA-OAR-WPO-2025-28601 \\ Priority: Fire Weather Testbed \\ Project Period: August 1, 2025 - July 31, 2027 \vspace{-.3cm}}
 
 %%%%%%%%% AUTHORS - PLEASE UPDATE
-\author{\textbf{Lead PI:} Rey Koki, Associate Scientist in Machine Learning\\
-Cooperative Institute for Research in Environmental\\
-Sciences (CIRES), NOAA GSL affiliate\\
+\author{\textbf{Lead PI:} Rey Koki, CIRES Associate Scientist in Machine Learning\\
+University of Colorado, Boulder, NOAA GSL Affiliate\\
+455 S 38th St, Boulder, CO 80305\\
 phone: {\tt\small 303-478-9911}, email: {\tt\small rey.koki@noaa.gov}
 \and
-\textbf{Collaborator:} Jebb Q. Stewart, Weather Visualization and AI\\
-Research Development (WIZARD) Branch Chief, NOAA GSL\\
+\textbf{Authorized Institutional Representative:} University of Colorado, Boulder\\
+Cameron Walker, CIRES proposal analyst\\
+CIRES Building, room 318, 1665 Central Campus Mall, 216 UCB, Boulder, CO  80309\\
+phone: {\tt\small 303-735-8033}, email: {\tt\small cameron.walker@colorado.edu}
+\and
+\textbf{Collaborator:} Jebb Q. Stewart, WIZARD Branch Chief, NOAA GSL\\
 phone: {\tt\small 307-215-3917}, email: {\tt\small jebb.q.stewart@noaa.gov}
 \and
 \textbf{Collaborator:} Eric James, Senior Associate Scientist, NOAA GSL\\
@@ -51,6 +54,44 @@ phone: {\tt\small 202-341-7763}, email: {\tt\small wilfrid.schroeder@noaa.gov}
 
 \begin{document}
 \maketitle
+\vspace{-.8cm}
+\begin{center}
+    \begin{tabular}{ |l|l|l|l|l| }
+        \hline
+        \multicolumn{5}{ |c| }{Budget Summary} \\
+        \hline
+        Organization & PI \& email & Year 1 & Year 2 & Total  \\
+        \hline
+        The University of & Rey Koki & \$82,861 &  \$86,383 & \$169,244 \\
+        Colorado, Boulder  & {\tt\small rey.koki@noaa.gov} &  &   &  \\
+        \hline
+        NOAA/GSL & Jesse Newhart & \$25,609  & \$26,434  & \$52,043  \\
+                 & {\tt\small jesse.newhart@noaa.gov}  &   &   &   \\
+        \hline
+        NOAA/NESDIS & Wilfrid Schroeder   & \$1,270 &   \$0 & \$1,270  \\
+                    & {\tt\small wilfrid.schroeder@noaa.gov}  &   &   &   \\
+        \hline
+        Total &  & \$109,740  &  \$112,817 & \$222,557   \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\vspace{.1cm}
+\noindent \textbf{Additional Funding Notes:}
+
+\vspace{.1cm}
+
+\noindent If this proposal is funded, the University of Colorado requests that the award not be linked to or sent via the Cooperative Agreement (Award NA22OAR4320151)
+
+\vspace{.1cm}
+
+\noindent Subawards: None
+
+\begin{center}
+Starting Readiness Level: RL 5 \hspace{1cm} $|$ \hspace{1cm} Ending Readiness Level: RL 8
+\end{center}
+
 \pagebreak
 \input{sec/0_abstract}
 \pagebreak
